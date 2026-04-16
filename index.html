@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohaib Bin Tausif — Cybersecurity & Full-Stack Developer</title>
-    <meta name="description" content="Personal portfolio of Sohaib Bin Tausif, a Cybersecurity undergraduate at GIKI and full-stack developer building secure, high-performance systems.">
+    <meta name="description"
+        content="Personal portfolio of Sohaib Bin Tausif, a Cybersecurity undergraduate at GIKI and full-stack developer building secure, high-performance systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* ========== RESET & BASE ========== */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,8 +28,8 @@
 
         body {
             font-family: 'DM Sans', sans-serif;
-            background-color: #0B0F1A;
-            color: #E8ECF1;
+            background-color: #E8F4F6;
+            color: #0B2E33;
             line-height: 1.7;
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
@@ -39,30 +45,33 @@
             height: 100%;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.4;
+            opacity: 0.5;
             transition: opacity 0.15s ease;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 24 L32 30 L30 36 L28 30 Z' fill='%234F8CFF' fill-opacity='0.25'/%3E%3C/svg%3E"),
-                             url("data:image/svg+xml,%3Csvg width='90' height='90' viewBox='0 0 90 90' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45 38 L47 45 L45 52 L43 45 Z' fill='%234F8CFF' fill-opacity='0.15'/%3E%3C/svg%3E"),
-                             url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='1.5' fill='%234F8CFF' fill-opacity='0.2'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.2' fill='%234F7C82' fill-opacity='0.12'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg width='90' height='90' viewBox='0 0 90 90' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='45' cy='45' r='1' fill='%234F7C82' fill-opacity='0.08'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='1.5' fill='%234F7C82' fill-opacity='0.06'/%3E%3C/svg%3E");
             background-size: 60px 60px, 90px 90px, 120px 120px;
             background-position: 0 0, 30px 45px, 15px 15px;
         }
 
         /* ========== DESIGN TOKENS ========== */
         :root {
-            --bg: #0B0F1A;
-            --text: #E8ECF1;
-            --accent: #4F8CFF;
-            --surface: #111827;
-            --muted: #7B8CA6;
-            --border: #1E293B;
+            --bg: #E8F4F6;
+            --text: #0B2E33;
+            --accent: #0B2E33;
+            --surface: #D4EAED;
+            --muted: #4F7C82;
+            --border: #BDD5D9;
             --font-heading: 'Playfair Display', serif;
             --font-body: 'DM Sans', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
         }
 
         /* ========== TYPOGRAPHY ========== */
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: var(--font-heading);
             font-weight: 600;
             line-height: 1.2;
@@ -75,7 +84,7 @@
 
         ::selection {
             background: var(--accent);
-            color: #0B0F1A;
+            color: #fff;
         }
 
         /* ========== UTILITY ========== */
@@ -95,6 +104,8 @@
 
         section {
             padding: 100px 0;
+            position: relative;
+            z-index: 1;
         }
 
         /* ========== REVEAL ANIMATIONS ========== */
@@ -134,9 +145,9 @@
         }
 
         .navbar.scrolled {
-            background-color: rgba(11, 15, 26, 0.95);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+            background-color: rgba(11, 46, 51, 0.95);
+            border-bottom: 1px solid #1A4A52;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(12px);
         }
 
@@ -153,7 +164,7 @@
             font-family: var(--font-body);
             font-weight: 500;
             font-size: 1.1rem;
-            color: var(--text);
+            color: var(--bg);
             letter-spacing: -0.01em;
         }
 
@@ -168,7 +179,7 @@
             font-family: var(--font-body);
             font-size: 0.9rem;
             font-weight: 400;
-            color: var(--muted);
+            color: var(--border);
             position: relative;
             padding-bottom: 2px;
             transition: color 0.3s ease;
@@ -181,51 +192,65 @@
             left: 0;
             width: 0;
             height: 1.5px;
-            background-color: var(--accent);
+            background-color: var(--bg);
             transition: width 0.3s ease;
         }
 
         .navbar-links a:hover {
-            color: var(--text);
+            color: var(--bg);
         }
 
         .navbar-links a:hover::after {
             width: 100%;
         }
 
-        .navbar-github {
+        .navbar-icon-link {
             display: flex;
             align-items: center;
-            color: var(--muted);
-            transition: color 0.3s ease;
+            color: var(--bg);
+            transition: color 0.3s ease, transform 0.2s ease;
         }
 
-        .navbar-github:hover {
-            color: var(--text);
+        .navbar-icon-link:hover {
+            color: var(--border);
+            transform: translateY(-1px);
         }
 
-        .navbar-github svg {
-            width: 20px;
-            height: 20px;
+        .navbar-icon-link::after {
+            display: none;
         }
 
-        .navbar-contact-badge {
+        .navbar-icon-link svg {
+            width: 21px;
+            height: 21px;
+        }
+
+        .navbar-download-btn {
             display: inline-flex;
             align-items: center;
-            padding: 8px 18px;
-            background-color: var(--accent);
-            color: #0B0F1A;
+            justify-content: center;
+            text-align: center;
+            padding: 8px 22px 12px;
+            background-color: #0B2E33;
+            color: #E8F4F6;
+            border: 1.5px solid #E8F4F6;
             font-family: var(--font-body);
             font-size: 0.85rem;
             font-weight: 500;
-            border-radius: 6px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 24px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
 
-        .navbar-contact-badge:hover {
-            background-color: #6FA0FF;
-            transform: translateY(-1px);
+        .navbar-download-btn::after {
+            display: none;
+        }
+
+        .navbar-download-btn:hover {
+            background-color: var(--surface);
+            transform: translateY(-1px) scale(1.07);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+            color: var(--accent);
         }
 
         /* Hamburger */
@@ -243,7 +268,7 @@
             display: block;
             width: 24px;
             height: 2px;
-            background-color: #E8ECF1;
+            background-color: var(--bg);
             border-radius: 2px;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
@@ -267,14 +292,15 @@
             top: 72px;
             left: 0;
             right: 0;
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
+            background: rgba(11, 46, 51, 0.98);
+            border-bottom: 1px solid #1A4A52;
             padding: 24px;
             transform: translateY(-100%);
             opacity: 0;
             transition: transform 0.35s ease, opacity 0.35s ease;
             z-index: 999;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
         }
 
         .mobile-menu.open {
@@ -287,8 +313,8 @@
             padding: 14px 0;
             font-family: var(--font-body);
             font-size: 1rem;
-            color: var(--muted);
-            border-bottom: 1px solid var(--border);
+            color: var(--border);
+            border-bottom: 1px solid #1A4A52;
             transition: color 0.3s ease;
         }
 
@@ -297,11 +323,12 @@
         }
 
         .mobile-menu a:hover {
-            color: var(--text);
+            color: var(--bg);
         }
 
         /* ========== HERO ========== */
         .hero {
+            background-color: #0B2E33;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -319,9 +346,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: radial-gradient(circle, rgba(79, 140, 255, 0.15) 1px, transparent 1px);
+            background-image: radial-gradient(circle, rgba(232, 244, 246, 0.15) 1px, transparent 1px);
             background-size: 28px 28px;
-            opacity: 0.6;
+            opacity: 0.5;
             pointer-events: none;
         }
 
@@ -332,8 +359,8 @@
             left: 40px;
             width: 80px;
             height: 80px;
-            border-left: 1.5px solid rgba(79, 140, 255, 0.35);
-            border-top: 1.5px solid rgba(79, 140, 255, 0.35);
+            border-left: 1.5px solid rgba(232, 244, 246, 0.25);
+            border-top: 1.5px solid rgba(232, 244, 246, 0.25);
             pointer-events: none;
             opacity: 0;
             animation: fadeUp 0.8s ease 0.6s forwards;
@@ -348,7 +375,7 @@
             font-family: var(--font-heading);
             font-size: clamp(2.8rem, 6vw, 5.2rem);
             font-weight: 700;
-            color: var(--text);
+            color: var(--bg);
             letter-spacing: -0.02em;
             margin-bottom: 20px;
             opacity: 0;
@@ -359,7 +386,7 @@
         .hero-tagline {
             font-family: var(--font-body);
             font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--muted);
+            color: var(--border);
             font-weight: 400;
             margin-bottom: 40px;
             opacity: 0;
@@ -388,44 +415,44 @@
             display: inline-flex;
             align-items: center;
             padding: 14px 32px;
-            background-color: var(--accent);
-            color: #0B0F1A;
+            background-color: #0B2E33;
+            color: #E8F4F6;
             font-family: var(--font-body);
             font-size: 0.95rem;
             font-weight: 500;
-            border-radius: 8px;
-            border: 2px solid var(--accent);
+            border-radius: 28px;
+            border: 2px solid #E8F4F6;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
         }
 
         .btn-primary:hover {
-            background-color: #6FA0FF;
-            border-color: #6FA0FF;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(79, 140, 255, 0.3);
+            background-color: #1A4A52;
+            border-color: #E8F4F6;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(232, 244, 246, 0.2);
         }
 
         .btn-outline {
             display: inline-flex;
             align-items: center;
             padding: 14px 32px;
-            background-color: transparent;
-            color: var(--accent);
+            background-color: #0B2E33;
+            color: #E8F4F6;
             font-family: var(--font-body);
             font-size: 0.95rem;
             font-weight: 500;
-            border-radius: 8px;
-            border: 2px solid var(--accent);
+            border-radius: 28px;
+            border: 2px solid #E8F4F6;
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
         }
 
         .btn-outline:hover {
-            background-color: var(--accent);
-            color: #0B0F1A;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(79, 140, 255, 0.3);
+            background-color: #1A4A52;
+            border-color: #E8F4F6;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(232, 244, 246, 0.2);
         }
 
         /* ========== ABOUT ========== */
@@ -534,11 +561,11 @@
         }
 
         .project-card {
-            background: var(--surface);
+            background: #F0F8F9;
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 36px;
-            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -546,8 +573,7 @@
 
         .project-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(79, 140, 255, 0.3);
+            box-shadow: 0 12px 40px rgba(11, 46, 51, 0.1);
         }
 
         .project-title {
@@ -623,77 +649,224 @@
 
         /* ========== CONTACT ========== */
         #contact {
-            background-color: var(--bg);
-            text-align: center;
+            background-color: #0B2E33;
+            color: #E8F4F6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(91, 184, 196, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        #contact::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(91, 184, 196, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 64px;
+            align-items: start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
         }
 
         .contact-heading {
             font-family: var(--font-heading);
             font-size: clamp(2.2rem, 5vw, 3.2rem);
             font-weight: 600;
-            margin-bottom: 48px;
-            color: var(--text);
+            color: #E8F4F6;
+            line-height: 1.2;
+        }
+
+        .contact-subtitle {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            color: #8AABB0;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 20px 24px;
+            background: rgba(16, 58, 64, 0.6);
+            border: 1px solid rgba(91, 184, 196, 0.15);
+            border-radius: 14px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: default;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: rgba(91, 184, 196, 0.4);
+            box-shadow: 0 8px 32px rgba(91, 184, 196, 0.12);
+            background: rgba(16, 58, 64, 0.85);
+        }
+
+        .contact-card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(91, 184, 196, 0.2), rgba(91, 184, 196, 0.05));
+            flex-shrink: 0;
+        }
+
+        .contact-card-icon svg {
+            width: 22px;
+            height: 22px;
+            color: #5BB8C4;
+        }
+
+        .contact-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contact-card-label {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #5BB8C4;
+        }
+
+        .contact-card-value {
+            font-family: var(--font-mono);
+            font-size: 0.92rem;
+            color: #E8F4F6;
+            letter-spacing: 0.01em;
+        }
+
+        .contact-form-wrapper {
+            background: rgba(16, 58, 64, 0.4);
+            border: 1px solid rgba(91, 184, 196, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+        }
+
+        .contact-form-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #E8F4F6;
+            margin-bottom: 28px;
         }
 
         .contact-form {
-            max-width: 640px;
-            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
         }
 
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 18px 20px;
+            padding: 16px 20px;
             font-family: var(--font-body);
-            font-size: 1rem;
-            color: var(--text);
-            background-color: #0F1520;
-            border: 1px solid #2A3448;
-            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #E8F4F6;
+            background-color: rgba(11, 46, 51, 0.7);
+            border: 1px solid rgba(91, 184, 196, 0.15);
+            border-radius: 12px;
             outline: none;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             -webkit-appearance: none;
         }
 
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
-            color: var(--muted);
-            opacity: 0.7;
+            color: #5E8A90;
+            opacity: 0.9;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.1);
+            border-color: #5BB8C4;
+            box-shadow: 0 0 0 3px rgba(91, 184, 196, 0.1);
+            background-color: rgba(11, 46, 51, 0.9);
         }
 
         .contact-form textarea {
-            min-height: 160px;
+            min-height: 140px;
             resize: vertical;
         }
 
         .contact-form button {
             width: 100%;
-            padding: 18px 32px;
+            padding: 16px 32px;
             font-family: var(--font-body);
             font-size: 1rem;
             font-weight: 500;
-            color: #0B0F1A;
-            background-color: #E8ECF1;
+            color: #0B2E33;
+            background: linear-gradient(135deg, #E8F4F6, #B8DDE3);
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            margin-top: 8px;
+            transition: transform 0.25s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            margin-top: 6px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .contact-form button:hover::before {
+            left: 100%;
         }
 
         .contact-form button:hover {
-            background-color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(232, 236, 241, 0.15);
+            box-shadow: 0 8px 28px rgba(91, 184, 196, 0.2);
         }
 
         .contact-form button:active {
@@ -704,13 +877,14 @@
         .footer {
             padding: 40px 24px;
             text-align: center;
-            border-top: 1px solid var(--border);
+            background-color: #0B2E33;
+            border-top: 1px solid #1A4A52;
         }
 
         .footer p {
             font-family: var(--font-body);
             font-size: 0.85rem;
-            color: var(--muted);
+            color: #6B7D99;
         }
 
         /* ========== RESPONSIVE ========== */
@@ -736,6 +910,15 @@
                 grid-template-columns: 1fr;
             }
 
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-form-wrapper {
+                padding: 28px;
+            }
+
             .section-heading {
                 font-size: 2rem;
             }
@@ -755,7 +938,8 @@
                 align-items: center;
             }
 
-            .btn-primary, .btn-outline {
+            .btn-primary,
+            .btn-outline {
                 width: 100%;
                 justify-content: center;
             }
@@ -772,18 +956,13 @@
             .project-card {
                 padding: 28px;
             }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Background decorative stars -->
+    <!-- Background decorative circles -->
     <div class="bg-stars" id="bgStars"></div>
 
     <!-- ========== NAVBAR ========== -->
@@ -797,17 +976,26 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="https://github.com/Sohaib-10" target="_blank" rel="noopener noreferrer" class="navbar-github" aria-label="GitHub Profile">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <a href="https://github.com/Sohaib-10" target="_blank" rel="noopener noreferrer"
+                        class="navbar-icon-link" aria-label="GitHub Profile">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/sohaib-tausif-3a2153394" target="_blank" rel="noopener noreferrer" class="navbar-github" aria-label="LinkedIn Profile">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <a href="https://www.linkedin.com/in/sohaib-tausif-3a2153394" target="_blank"
+                        rel="noopener noreferrer" class="navbar-icon-link" aria-label="LinkedIn Profile">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" class="navbar-contact-badge">Contact Me</a>
+                    <a href="Sohaib_Resume.pdf" download="Sohaib_Resume.pdf" type="application/octet-stream"
+                        class="navbar-download-btn">View Resume</a>
                 </li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -826,7 +1014,10 @@
         <a href="#experience" class="mobile-link">Experience</a>
         <a href="#contact" class="mobile-link">Contact</a>
         <a href="https://github.com/Sohaib-10" target="_blank" rel="noopener noreferrer" class="mobile-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/sohaib-tausif-3a2153394" target="_blank" rel="noopener noreferrer" class="mobile-link">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/sohaib-tausif-3a2153394" target="_blank" rel="noopener noreferrer"
+            class="mobile-link">LinkedIn</a>
+        <a href="Sohaib_Resume.pdf" download="Sohaib_Resume.pdf" type="application/octet-stream"
+            class="mobile-link">Download Resume</a>
     </div>
 
     <!-- ========== HERO ========== -->
@@ -847,7 +1038,10 @@
             <h2 class="section-heading reveal">About</h2>
             <div class="about-grid">
                 <div class="about-text reveal">
-                    I study Cybersecurity at GIKI and spend most of my time building secure, high performance systems. From architecting full stack web apps to engineering cryptographic security modules, I focus on making technology work better and safer. Currently in my second year and already shipping real projects.
+                    I study Cybersecurity at GIKI and spend most of my time building secure, high performance systems.
+                    From architecting full stack web apps to engineering cryptographic security modules, I focus on
+                    making technology work better and safer. Currently in my second year and already shipping real
+                    projects.
                 </div>
                 <div class="about-stats">
                     <div class="stat-box reveal">
@@ -893,13 +1087,6 @@
                         <span class="skill-pill reveal-stagger">Vercel</span>
                     </div>
                 </div>
-                <!-- Hardware -->
-                <div class="reveal">
-                    <div class="skill-group-label">Hardware</div>
-                    <div class="skill-pills">
-                        <span class="skill-pill reveal-stagger">Arduino IDE</span>
-                    </div>
-                </div>
                 <!-- Security -->
                 <div class="reveal">
                     <div class="skill-group-label">Security</div>
@@ -917,6 +1104,14 @@
                         <span class="skill-pill reveal-stagger">PostgreSQL</span>
                         <span class="skill-pill reveal-stagger">Linux Basic</span>
                         <span class="skill-pill reveal-stagger">Figma</span>
+                        <span class="skill-pill reveal-stagger">Shodan.io</span>
+                    </div>
+                </div>
+                <!-- Hardware -->
+                <div class="reveal">
+                    <div class="skill-group-label">Hardware</div>
+                    <div class="skill-pills">
+                        <span class="skill-pill reveal-stagger">Arduino IDE</span>
                     </div>
                 </div>
             </div>
@@ -932,25 +1127,32 @@
                 <div class="project-card reveal-stagger">
                     <div class="project-title">OptiSpace</div>
                     <div class="project-stack">React, Node.js, Express, PostgreSQL</div>
-                    <p class="project-desc">A smart campus facility booking and utilization system. Built with a normalized 3NF schema and a recommendation engine to suggest optimal spaces based on usage.</p>
+                    <p class="project-desc">A smart campus facility booking and utilization system. Built with a
+                        normalized 3NF schema and a recommendation engine to suggest optimal spaces based on usage.</p>
                 </div>
                 <!-- RBAC Security System -->
                 <div class="project-card reveal-stagger">
                     <div class="project-title">RBAC Security System</div>
                     <div class="project-stack">C++, Cryptographic Hashing, XOR Encryption</div>
-                    <p class="project-desc">Engineered a role based access control system featuring real time email OTP verification. Secured sensitive credentials using file encryption to ensure high performance data integrity.</p>
+                    <p class="project-desc">Engineered a role based access control system featuring real time email OTP
+                        verification. Secured sensitive credentials using file encryption to ensure high performance
+                        data integrity.</p>
                 </div>
                 <!-- Multi-User Notebook -->
                 <div class="project-card reveal-stagger">
                     <div class="project-title">Multi User Notebook</div>
                     <div class="project-stack">Linked Lists, Queues, BSTs</div>
-                    <p class="project-desc">Architected a multi user notebook system for optimized profile and expense management. Leveraged advanced data structures for high performance notification and data handling.</p>
+                    <p class="project-desc">Architected a multi user notebook system for optimized profile and expense
+                        management. Leveraged advanced data structures for high performance notification and data
+                        handling.</p>
                 </div>
                 <!-- Data Processing Algorithms -->
                 <div class="project-card reveal-stagger">
                     <div class="project-title">Data Processing Algorithms</div>
                     <div class="project-stack">Python</div>
-                    <p class="project-desc">Optimized scalable algorithms for automated data analysis. Significantly reduced time complexity and resource overhead for high performance execution via comprehensive edge case testing.</p>
+                    <p class="project-desc">Optimized scalable algorithms for automated data analysis. Significantly
+                        reduced time complexity and resource overhead for high performance execution via comprehensive
+                        edge case testing.</p>
                 </div>
             </div>
         </div>
@@ -963,12 +1165,14 @@
             <div class="timeline-entry reveal">
                 <div class="timeline-role">Undergraduate Student and Developer at GIKI</div>
                 <div class="timeline-dates">2024 to Present</div>
-                <p class="timeline-desc">Currently pursuing a degree in Cybersecurity while building real world projects in full stack development and security engineering.</p>
+                <p class="timeline-desc">Currently pursuing a degree in Cybersecurity while building real world projects
+                    in full stack development and security engineering.</p>
             </div>
             <div class="timeline-entry reveal">
                 <div class="timeline-role">Volunteer and Event Organizer</div>
-                <div class="timeline-dates">2024 to Present</div>
-                <p class="timeline-desc">Volunteered in multiple university events at GIKI. Organized a cricket tournament managing team registrations, scheduling, and on ground coordination. Also helped plan and execute social events on campus, handling logistics and ensuring everything ran smoothly.</p>
+                <p class="timeline-desc">Volunteered in multiple university events at GIKI. Organized a cricket
+                    tournament managing team registrations, scheduling, and on ground coordination. Also helped plan and
+                    execute social events on campus, handling logistics and ensuring everything ran smoothly.</p>
             </div>
         </div>
     </section>
@@ -976,21 +1180,63 @@
     <!-- ========== CONTACT ========== -->
     <section id="contact">
         <div class="container">
-            <h2 class="contact-heading reveal">Lets Build Something</h2>
-            <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/sohaibtausif141@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Project Details" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="contact-grid">
+                <!-- Left: Info -->
+                <div class="contact-info reveal">
+                    <h2 class="contact-heading">Let's Build<br>Something Together</h2>
+                    <p class="contact-subtitle">Have a project in mind or just want to say hello? I'd love to hear from
+                        you. Reach out through the form or contact me directly.</p>
+                    <div class="contact-details">
+                        <!-- Phone Card -->
+                        <a href="tel:+923320205825" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Phone</span>
+                                <span class="contact-card-value">+92 332 0205825</span>
+                            </div>
+                        </a>
+                        <!-- Email Card -->
+                        <a href="mailto:sohaibtausif141@gmail.com" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">sohaibtausif141@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right: Form -->
+                <div class="contact-form-wrapper reveal">
+                    <div class="contact-form-title">Send a Message</div>
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/sohaibtausif141@gmail.com"
+                        method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+                        <button type="submit">Send Message →</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <p>Sohaib Bin Tausif 2025. Built with purpose.</p>
+        <p>Sohaib Bin Tausif. Built with purpose.</p>
     </footer>
 
     <!-- ========== JAVASCRIPT ========== -->
@@ -1046,7 +1292,7 @@
                     const children = entry.target.querySelectorAll('.reveal-stagger');
                     const isProjectGrid = entry.target.classList.contains('projects-grid');
                     const delay = isProjectGrid ? 100 : 50;
-                    
+
                     children.forEach((child, index) => {
                         setTimeout(() => {
                             child.classList.add('visible');
@@ -1062,14 +1308,15 @@
 
         staggerContainers.forEach(el => staggerObserver.observe(el));
 
-        // Background stars scroll fade
+        // Background circles scroll fade
         const bgStars = document.getElementById('bgStars');
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const fadeEnd = window.innerHeight * 1.5;
-            const opacity = Math.max(0, 0.4 * (1 - scrollY / fadeEnd));
+            const opacity = Math.max(0, 0.5 * (1 - scrollY / fadeEnd));
             bgStars.style.opacity = opacity;
         });
     </script>
 </body>
+
 </html>
